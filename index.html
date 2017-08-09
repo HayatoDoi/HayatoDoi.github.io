@@ -25,7 +25,7 @@
                         <h3 class="title">
                             <a :href="'page.html?name=' + article.path">{{article.title}}</a>
                         </h3>
-                        <p v-text="article.txt"></p>
+                        <p>{{article.txt}}...</p>
                         <a :href="'https://github.com/' + githubName">{{githubName}}</a> | {{article.date}}
                         <hr width="100%">
                     </div>
