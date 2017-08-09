@@ -29,37 +29,43 @@ function getRepsMarkdownList(){
 	});
 }
 
-function getMarkdownTextList(){
+function getMarkdown(){
   return new Promise((resolve, reject)=>{
     getRepsMarkdownList()
     .then(repsMarkdownList => {
+      let process = [];
+      let r = [];
       for(let i = 0; i < repsMarkdownList.length;i++){
-        axios.get(`markdown/${repsMarkdownList[i]}`)
-        .then(response => {
-          // console.log(response.data);
-          repsMarkdownList[i].markdown = response.data;
-          if(i === repsMarkdownList.length - 1){
-            resolve(repsMarkdownList);
-          }
-        })
+        process[i] = new Promise((resolve, reject)=>{
+          axios.get(`markdown/${repsMarkdownList[i]}`)
+          .then(response => {
+            // console.log(response.data);
+            r.push({path : repsMarkdownList[i], text : response.data});
+            resolve();
+          })
+        });
       }
+      Promise.all(process).then(()=>{
+        // console.log(r);
+        resolve(r);
+      });
     })
   })
 }
 
-getMarkdownTextList()
-.then(markdownTextList => {
+getMarkdown()
+.then(markdownList => {
   // console.log(markdownTextList);
 
   let articles = [];
-  for(let i = 0; i < markdownTextList.length;i++){
-    if(markdownTextList[i].match(/^\d{4}-\d{2}-\d{2}_.*\.md$/)){
-      console.log(markdownTextList[i]);
+  for(let i = 0; i < markdownList.length;i++){
+    if(markdownList[i].path.match(/^\d{4}-\d{2}-\d{2}_.*\.md$/)){
+      console.log(markdownList[i].path);
       articles.push({
-        title : markdownTextList[i].replace(/^\d{4}-\d{2}-\d{2}_/, '').replace(/\.md/, ''),
-        path : markdownTextList[i],
-        txt : marked(markdownTextList[i].markdown).replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'').substring(0, 300),
-        date : markdownTextList[i].match(/^\d{4}-\d{2}-\d{2}/)[0]
+        title : markdownList[i].path.replace(/^\d{4}-\d{2}-\d{2}_/, '').replace(/\.md/, ''),
+        path : markdownList[i].path,
+        txt : marked(markdownList[i].text).replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'').substring(0, 300),
+        date : markdownList[i].path.match(/^\d{4}-\d{2}-\d{2}/)[0]
       });
     }
   }
