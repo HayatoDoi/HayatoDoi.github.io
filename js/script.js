@@ -16,8 +16,13 @@ function getRepsMarkdownList(){
         }
         axios.get(repsMarkdownUrl)
         .then(response => {
-          let repsMarkdownList = response.data.tree;
-          resolve(repsMarkdownList);
+          let repsMarkdownObj = response.data.tree;
+          let repsMarkdownList = [];
+          for(let i = 0; i < repsMarkdownObj.length;i++){
+            repsMarkdownList.push(repsMarkdownObj[i].path);
+          }
+          // console.log(repsMarkdownList.sort().reverse());
+          resolve(repsMarkdownList.sort().reverse());
         })
       })
     })
@@ -29,7 +34,7 @@ function getMarkdownTextList(){
     getRepsMarkdownList()
     .then(repsMarkdownList => {
       for(let i = 0; i < repsMarkdownList.length;i++){
-        axios.get(`markdown/${repsMarkdownList[i].path}`)
+        axios.get(`markdown/${repsMarkdownList[i]}`)
         .then(response => {
           // console.log(response.data);
           repsMarkdownList[i].markdown = response.data;
@@ -48,16 +53,17 @@ getMarkdownTextList()
 
   let articles = [];
   for(let i = 0; i < markdownTextList.length;i++){
-    if(markdownTextList[i].path.match(/^\d{4}-\d{2}-\d{2}_.*\.md$/)){
-      console.log(markdownTextList[i].path);
+    if(markdownTextList[i].match(/^\d{4}-\d{2}-\d{2}_.*\.md$/)){
+      console.log(markdownTextList[i]);
       articles.push({
-        title : markdownTextList[i].path.replace(/^\d{4}-\d{2}-\d{2}_/, '').replace(/\.md/, ''),
-        path : markdownTextList[i].path,
+        title : markdownTextList[i].replace(/^\d{4}-\d{2}-\d{2}_/, '').replace(/\.md/, ''),
+        path : markdownTextList[i],
         txt : marked(markdownTextList[i].markdown).replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'').substring(0, 300),
-        date : markdownTextList[i].path.match(/^\d{4}-\d{2}-\d{2}/)[0]
+        date : markdownTextList[i].match(/^\d{4}-\d{2}-\d{2}/)[0]
       });
     }
   }
+  console.log(articles);
   new Vue({
     el: '#articles',
     data: {
