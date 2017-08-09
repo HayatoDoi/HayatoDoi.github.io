@@ -78,7 +78,15 @@ function getRepsMarkdownList(){
     else{
       axios.get('articles-list')
       .then(response => {
-        let ldbMarkdownList = response.data.split("\n");
+        let ldbMarkdownList_tmp = response.data.split("\n");
+        let ldbMarkdownList = [];
+        // Delete unnecessary character string
+        for(let i = 0; i < ldbMarkdownList_tmp.length; i++){
+          ldbMarkdownList_tmp[i] = ldbMarkdownList_tmp[i];
+          if( !( ldbMarkdownList_tmp[i] === '')){
+            ldbMarkdownList.push(ldbMarkdownList_tmp[i]);
+          }
+        }
         ldbMarkdownList.sort().reverse();
         console.log(ldbMarkdownList);
         resolve(ldbMarkdownList);
@@ -104,8 +112,20 @@ function getMarkdown(){
           axios.get(`markdown/${repsMarkdownList[i]}`)
           .then(response => {
             // console.log(response.data);
-            r.push({path : repsMarkdownList[i], text : response.data});
-            resolve();
+            //(Why is not ===) Perhaps the strings will come back
+            if(response.status == 200){
+              r.push({path : repsMarkdownList[i], text : response.data});
+              resolve();
+            }
+            else{
+              r.push({path : '', text : ''});
+              reject();
+            }
+          })
+          .catch((e)=>{
+            console.error(e);
+            r.push({path : '', text : ''});
+            reject();
           })
         });
       }
