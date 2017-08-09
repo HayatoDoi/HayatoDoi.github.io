@@ -17,17 +17,10 @@
                 <nav-component></nav-component>
             </div> 
 
-            <!-- articles -->
+            <!-- article -->
             <section class="container">
-                <div id="articles">
-                    <div v-for="article in articles">
-                        <h3 class="title">
-                            <a :href="'page.html?name=' + article.path">{{article.title}}</a>
-                        </h3>
-                        <p v-text="article.txt"></p>
-                        <a :href="'https://github.com/' + githubName">{{githubName}}</a> | {{article.date}}
-                        <hr width="100%">
-                    </div>
+                <div id="article">
+                    <div v-html="article_body"></div>
                 </div>
             </section>
 
@@ -42,7 +35,7 @@
             <script src="js/marked.js"></script>
 
             <!-- scripts -->
-            <script src="js/script.js"></script>
+            <script src="js/reammd.js"></script>
             <script src="js/html_template.js"></script>
         </main>
 
