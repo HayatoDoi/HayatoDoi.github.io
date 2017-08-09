@@ -11,6 +11,38 @@
  * I do not want to modify this anymore, so fix it yourself if you find a bug.
  */
 
+getMarkdown()
+.then(markdownList => {
+  // console.log(markdownTextList);
+  let articles = [];
+  for(let i = 0; i < markdownList.length;i++){
+    if(markdownList[i].path.match(/^\d{4}-\d{2}-\d{2}_.*\.md$/)){
+      console.log(markdownList[i].path);
+      articles.push({
+        title : markdownList[i].path.replace(/^\d{4}-\d{2}-\d{2}_/, '').replace(/\.md/, ''),
+        path : markdownList[i].path,
+        txt : marked(markdownList[i].text || 'Ajax error :)').replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'').substring(0, 300),
+        date : markdownList[i].path.match(/^\d{4}-\d{2}-\d{2}/)[0]
+      });
+    }
+  }
+  console.log(articles);
+  new Vue({
+    el: '#articles',
+    data: {
+      articles : articles,
+      githubName : githubName
+    }
+  })
+})
+
+
+ /**
+  * Outline : Get article list using GitHub API.
+  * Args    : @param None
+  * Return  : Array (String)
+  *         : ex, ['markdown name 1', 'markdown name 2', .....] 
+  */
 function getRepsMarkdownList(){
   return new Promise((resolve, reject)=>{
     axios.get(`https://api.github.com/repos/${githubName}/${githubName}.github.io/branches/master`)
@@ -41,6 +73,12 @@ function getRepsMarkdownList(){
 	});
 }
 
+ /**
+  * Outline : Get article list using getRepsMarkdownList(function).
+  * Args    : @param None
+  * Return  : Array (Object)
+  *         : ex, [{'markdown name 1', 'markdown text 1'}, {'markdown name 2', 'markdown text 2'}, .....] 
+  */
 function getMarkdown(){
   return new Promise((resolve, reject)=>{
     getRepsMarkdownList()
@@ -64,29 +102,3 @@ function getMarkdown(){
     })
   })
 }
-
-getMarkdown()
-.then(markdownList => {
-  // console.log(markdownTextList);
-  let articles = [];
-  for(let i = 0; i < markdownList.length;i++){
-    if(markdownList[i].path.match(/^\d{4}-\d{2}-\d{2}_.*\.md$/)){
-      console.log(markdownList[i].path);
-      let ajaxError = 'Ajax error :)';
-      articles.push({
-        title : markdownList[i].path.replace(/^\d{4}-\d{2}-\d{2}_/, '').replace(/\.md/, ''),
-        path : markdownList[i].path,
-        txt : marked(markdownList[i].text || ajaxError).replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'').substring(0, 300),
-        date : markdownList[i].path.match(/^\d{4}-\d{2}-\d{2}/)[0]
-      });
-    }
-  }
-  console.log(articles);
-  new Vue({
-    el: '#articles',
-    data: {
-      articles : articles,
-      githubName : githubName
-    }
-  })
-})

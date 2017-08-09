@@ -26,6 +26,7 @@ axios.get(`markdown/${getUrlVars().name}`)
 })
 
 /**
+ * Outline : Get "HTTP GET parameter"
  * This function consulted url below.
  * http://qiita.com/Evolutor_web/items/c9b940f752883676b35d
  */
