@@ -38,38 +38,52 @@ getMarkdown()
 
 
  /**
-  * Outline : Get article list using GitHub API.
+  * Outline : Get article list using GitHub API or local database.
   * Args    : @param None
   * Return  : Array (String)
   *         : ex, ['markdown name 1', 'markdown name 2', .....] 
   */
 function getRepsMarkdownList(){
   return new Promise((resolve, reject)=>{
-    axios.get(`https://api.github.com/repos/${githubName}/${githubName}.github.io/branches/master`)
-    .then(response => {
-      let repsTreeUrl = response.data.commit.commit.tree.url;
-      axios.get(repsTreeUrl)
+    // Use Github API
+    if(isUseGithubApi){
+      axios.get(`https://api.github.com/repos/${githubName}/${githubName}.github.io/branches/master`)
       .then(response => {
-        let repsTreeList = response.data.tree;
-        let repsMarkdownUrl = '';
-        for(let i = 0; i < repsTreeList.length; i++){
-          if(repsTreeList[i].path === 'markdown'){
-            repsMarkdownUrl = repsTreeList[i].url;
-            break;
-          }
-        }
-        axios.get(repsMarkdownUrl)
+        let repsTreeUrl = response.data.commit.commit.tree.url;
+        axios.get(repsTreeUrl)
         .then(response => {
-          let repsMarkdownObj = response.data.tree;
-          let repsMarkdownList = [];
-          for(let i = 0; i < repsMarkdownObj.length;i++){
-            repsMarkdownList.push(repsMarkdownObj[i].path);
+          let repsTreeList = response.data.tree;
+          let repsMarkdownUrl = '';
+          for(let i = 0; i < repsTreeList.length; i++){
+            if(repsTreeList[i].path === 'markdown'){
+              repsMarkdownUrl = repsTreeList[i].url;
+              break;
+            }
           }
-          console.log(repsMarkdownList.sort().reverse());
-          resolve(repsMarkdownList.sort().reverse());
+          axios.get(repsMarkdownUrl)
+          .then(response => {
+            let repsMarkdownObj = response.data.tree;
+            let repsMarkdownList = [];
+            for(let i = 0; i < repsMarkdownObj.length;i++){
+              repsMarkdownList.push(repsMarkdownObj[i].path);
+            }
+            repsMarkdownList.sort().reverse();
+            console.log(repsMarkdownList);
+            resolve(repsMarkdownList);
+          })
         })
       })
-    })
+    }
+    // Use local database
+    else{
+      axios.get('articles-list')
+      .then(response => {
+        let ldbMarkdownList = response.data.split("\n");
+        ldbMarkdownList.sort().reverse();
+        console.log(ldbMarkdownList);
+        resolve(ldbMarkdownList);
+      })
+    }
 	});
 }
 
