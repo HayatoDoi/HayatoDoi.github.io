@@ -1,3 +1,15 @@
+/**
+ * File Name : js/script.js
+ * Outline   : Write Article heading.
+ * -------------------------------------------------
+ * (c) 2017, Hayato Doi. (MIT Licensed)
+ * https://github.com/HayatoDoi/HayatoDoi.github.io
+ */
+
+/**
+ * This became a very dirty code :)
+ * I do not want to modify this anymore, so fix it yourself if you find a bug.
+ */
 
 function getRepsMarkdownList(){
   return new Promise((resolve, reject)=>{
@@ -7,9 +19,9 @@ function getRepsMarkdownList(){
       axios.get(repsTreeUrl)
       .then(response => {
         let repsTreeList = response.data.tree;
-        let repsMarkdownUrl = "";
+        let repsMarkdownUrl = '';
         for(let i = 0; i < repsTreeList.length; i++){
-          if(repsTreeList[i].path === "markdown"){
+          if(repsTreeList[i].path === 'markdown'){
             repsMarkdownUrl = repsTreeList[i].url;
             break;
           }
@@ -21,7 +33,7 @@ function getRepsMarkdownList(){
           for(let i = 0; i < repsMarkdownObj.length;i++){
             repsMarkdownList.push(repsMarkdownObj[i].path);
           }
-          // console.log(repsMarkdownList.sort().reverse());
+          console.log(repsMarkdownList.sort().reverse());
           resolve(repsMarkdownList.sort().reverse());
         })
       })
@@ -46,7 +58,7 @@ function getMarkdown(){
         });
       }
       Promise.all(process).then(()=>{
-        // console.log(r);
+        console.log(r);
         resolve(r);
       });
     })
@@ -56,15 +68,15 @@ function getMarkdown(){
 getMarkdown()
 .then(markdownList => {
   // console.log(markdownTextList);
-
   let articles = [];
   for(let i = 0; i < markdownList.length;i++){
     if(markdownList[i].path.match(/^\d{4}-\d{2}-\d{2}_.*\.md$/)){
       console.log(markdownList[i].path);
+      let ajaxError = 'Ajax error :)';
       articles.push({
         title : markdownList[i].path.replace(/^\d{4}-\d{2}-\d{2}_/, '').replace(/\.md/, ''),
         path : markdownList[i].path,
-        txt : marked(markdownList[i].text).replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'').substring(0, 300),
+        txt : marked(markdownList[i].text || ajaxError).replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'').substring(0, 300),
         date : markdownList[i].path.match(/^\d{4}-\d{2}-\d{2}/)[0]
       });
     }
@@ -77,9 +89,4 @@ getMarkdown()
       githubName : githubName
     }
   })
-
 })
-
-
-
-

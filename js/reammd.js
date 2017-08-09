@@ -1,10 +1,18 @@
+/**
+ * File Name : js/reammd.js
+ * Outline   : Write articles.
+ * -------------------------------------------------
+ * (c) 2017, Hayato Doi. (MIT Licensed)
+ * https://github.com/HayatoDoi/HayatoDoi.github.io
+ */
+
 axios.get(`markdown/${getUrlVars().name}`)
 .then(response => {
   // console.log(marked(response.data));
   new Vue({
     el: '#article',
     data: {
-      "article_body" : marked(response.data)
+      article_body : marked(response.data)
     }
   })
 })
@@ -12,12 +20,13 @@ axios.get(`markdown/${getUrlVars().name}`)
   new Vue({
     el: '#article',
     data: {
-      "article_body" : "<h1>404 Not found</h1>"
+      article_body : '<h1>404 Not found</h1>'
     }
   })
 })
 
 /**
+ * This function consulted url below.
  * http://qiita.com/Evolutor_web/items/c9b940f752883676b35d
  */
 

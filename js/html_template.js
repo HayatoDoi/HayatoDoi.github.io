@@ -1,3 +1,11 @@
+/**
+ * File Name : js/html_template.js
+ * Outline   : Write html template.
+ * -------------------------------------------------
+ * (c) 2017, Hayato Doi. (MIT Licensed)
+ * https://github.com/HayatoDoi/HayatoDoi.github.io
+ */
+
 //nav
 writeComponent('parts/nav.html', '#nav', 'nav-component',
   { githubName : githubName }
