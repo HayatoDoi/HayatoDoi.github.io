@@ -8,7 +8,7 @@ title: Home
 {% for post in site.posts %}
 <section class="post">
 <header class="post-header">
-<img width="48" height="48" class="post-avatar" src="/assets/favicon.jpg">
+<img class="post-avatar" src="/assets/favicon.jpg">
 <h2 class="post-title">
   <!-- <a href="{{post.url}}">{{post.title}}</a> -->
   <a href="{{post.url}}">{{post.title}}</a>

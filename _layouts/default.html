@@ -6,6 +6,9 @@
   - pure css framework v1.0.0
     - Copyright 2013 Yahoo! Inc.
     - https://github.com/pure-css/pure/blob/master/LICENSE.md
+  - twemoji
+    - Copyright (c) 2018 Twitter, Inc and other contributors
+    - https://github.com/twitter/twemoji/blob/gh-pages/LICENSE
 -->
 <!doctype html>
 <html lang="jp">
@@ -14,10 +17,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website.">
     <title>{{site.domain.upper}} - {{page.title}}</title>
-    <link rel="stylesheet" href="/assets/css/pure-min.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
     <link rel="stylesheet" href="/assets/css/layouts/side-menu.css">
     <link rel="stylesheet" href="/assets/css/layouts/footer.css">
+    <link rel="stylesheet" href="/assets/css/layouts/twemoji.css">
     <link rel="shortcut icon" href="/assets/favicon.jpg">
+    <script src="//twemoji.maxcdn.com/2/twemoji.min.js?2.5"></script>
 </head>
 <body>
 
@@ -53,6 +58,7 @@
 </div>
 <script src="/assets/js/select-pure-menu-item.js"></script>
 <script src="/assets/js/ui.js"></script>
+<script>twemoji.parse(document.body);</script>
 </body>
 </html>
 <style>

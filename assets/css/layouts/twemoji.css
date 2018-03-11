@@ -1,0 +1,15 @@
+/**
+ * File Name : twemoji.css
+ * Outline   : Set icon size for emoji.
+ * -------------------------------------------------
+ * (c) 2018 Hayato Doi. (CC0 Licensed)
+ * https://github.com/HayatoDoi/HayatoDoi.github.io
+ */
+
+img.emoji{
+    height: 1em;
+    width: 1em;
+    margin: 0 .05em 0 .1em;
+    vertical-align: -0.1em;
+}
+
