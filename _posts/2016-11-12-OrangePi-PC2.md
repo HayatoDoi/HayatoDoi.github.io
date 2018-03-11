@@ -7,12 +7,12 @@ excerpt: OrangePiとは、手のひらサイズのシングルコンピュータ
 
 ---
 
-##### OrangePiとは
+## OrangePiとは
 　OrangePiとは、手のひらサイズのシングルコンピュータです。OrangePiは有名なRaspberryPiとは違い種類が豊富でSATA2やマイクが載ってるものがあります。  
 　値段はRaspberryPiと同じ性能のものが$20ぐらいで安いです(RaspberryPiは$35)。  
 　サイズはこんな感じです。
 ![boughtOPIimg06.png](http://nononono.net/file/boughtOPIimg06.png)
-##### OrangePi PC2
+## OrangePi PC2
 　今回買ったのはOrangePi PC2というもので、性能は次の通りです。[参考](http://www.orangepi.org/orangepipc2/)
 <table border="1" rules="all">
 <tr><td>サポートしてるOS</td><td>Android Ubuntu Debian Rasberian</td></tr>
@@ -30,12 +30,12 @@ excerpt: OrangePiとは、手のひらサイズのシングルコンピュータ
 </table>
 RaspberryPi 3Bより、CPUやメモリの性能は低いですが1000Mイーサネットが付いています。
 
-##### 購入
+## 購入
 　[公式サイト](http://www.orangepi.org)から[購入ページ](https://www.aliexpress.com/store/1553371)に飛んで購入しました。  
 　$19.98で送料込みで2546円でした。英語のサイトで買い物をしたのは人生で初めてでドキドキしたぁ…  
 　後から気が付いたが、ケースや電源ケーブルも買っておけば良かったなぁ～と。
 
-##### 必要なものをそろえる
+## 必要なものをそろえる
 　必要なものは次の通りです。
 
 * キーボード
@@ -48,7 +48,7 @@ RaspberryPi 3Bより、CPUやメモリの性能は低いですが1000Mイーサ�
 
 DCケーブルはなかったため、友人からPSPの充電器を借りてテストしました。(買わないとなぁ…)
 
-##### いざ起動!!
+## いざ起動!!
 　まず、OSのイメージを[公式サイト](http://www.orangepi.org/downloadresources/)からダウンロードしてきます。公式サイトではサポートOSにArchLinuxがないですが人柱ぽっくArchを選んでみました。
 
 　ダウンロードしてきたイメージを解凍して(`xz -dv Arch_Server_PC2_V0_9_1.img.xz`)SDカードに焼き込みました(`dd bs=1m if=Arch_Server_PC2_V0_9_1.img of=/dev/<<sdcard>>`)。
@@ -75,18 +75,18 @@ DCケーブルはなかったため、友人からPSPの充電器を借りてテ
 　やったね♪
 ![boughtOPIimg04.png](http://nononono.net/file/boughtOPIimg04.png)
 
-##### 1000Mイーサネットを体感しちゃう♪
+## 1000Mイーサネットを体感しちゃう♪
 　RaspberryPiと違って1000Mイーサネットが搭載されているならどんだけ速いんだい？？ってことで計測してみた。
 ![boughtOPIimg05.png](http://nononono.net/file/boughtOPIimg05.png)
 
 　RaspberryPiが8ミリ秒の対してOrangePiは2ミリ秒!!  
 　4倍ですよ!!いいですね～♪
 
-##### 見た目
+## 見た目
 Amazonで買った[スペンサー](http://amzn.asia/eErrw49)を付けてみました。タワーにしようか？？
 ![boughtOPIimg07.png](http://nononono.net/file/boughtOPIimg07.png)
 
-##### 感想
+## 感想
 　中国製のボードということで、かなり不安だったのですがちゃんと動いてくれてよかったです。kernelが古かったり、グラフィックドライバがなかったりいろいろ問題が残ってますが満足かなと。  
 　RaspberryPiより速いイーサネットが載ってのでNASにするか…VPNserverにするか…localでDNS建てちゃうか…迷っちゃいますね。
 

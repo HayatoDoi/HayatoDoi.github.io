@@ -7,29 +7,29 @@ excerpt: ConohaでVPNを借りてみたという記事です。
 
 ---
 
-##### 初めてのこのは♪
+## 初めてのこのは♪
 　ConohaでVPNを借りてみたという記事です。
 
-##### なんでConohaなのか。
+### なんでConohaなのか。
  VPSを借りようとしてる人は、どこのVPSを借りようか迷うと思います。私がConohaを選んだ理由をまとめて見ました。
 
-###### 公式キャラがかわいい!!
+### 公式キャラがかわいい!!
  [Twiter](https://twitter.com/MikumoConoHa)で絡んでみたり、定期的に[このはブログ](https://www.conoha.jp/conohadocs/blog)を見てたりと…とても癒やされますよ…じゅるり…  
 　定期的にこのはちゃんの壁紙が配布されていて[ダウンロード](https://www.conoha.jp/conohadocs/)するとしあわせになれる♥ 
 
-###### ポイントでサーバを借りる。
+### ポイントでサーバを借りる。
  Conohaポイントで支払うため、引き落としが怖くない！しかも最近ConoHaカードなるものが出てきたらしく…もっと便利になりますね。[Conohaショップ](http://conoha.shop/?pid=110463419)と[Amazon](http://amzn.asia/1SBC3bF)で購入できるそうです。  
 <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">「ConoHaカード」の発売が開始されたよ！従来のクレジットカード・チャージ払いに加え「ConoHaカード」での支払いが可能に！<br>さらに、発売記念キャンペーンで上坂すみれさんの直筆サイン色紙が5名様に当たる！要チェックだね☆<a href="https://t.co/nYP5jKm7c3">https://t.co/nYP5jKm7c3</a> <a href="https://t.co/t6oSvSfoWG">pic.twitter.com/t6oSvSfoWG</a></p>&mdash; 美雲このは (@MikumoConoHa) <a href="https://twitter.com/MikumoConoHa/status/806367938320232452">2016年12月7日</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 かっ…かわいい///  
 
-###### 選べるOSがたくさんある。
+### 選べるOSがたくさんある。
 Cent Ubuntu Debian FreeBSD Fedora OpenSUSE Arch NetBSD OpenBSDとたくさんあって良いのですよ。
 ![http://nononono.net/file/ConoHaAdventCalendar20161201.png](http://nononono.net/file/ConoHaAdventCalendar20161201.png)
 
-##### 借りてみる。
+## 借りてみる。
 今回は、自宅においてあるこのブログをConohaに移行してみようと思います。  
-###### サーバの作成
+### サーバの作成
 アカウント作成後初めてログインすると、このようなページが出てきます。![http://nononono.net/file/ConoHaAdventCalendar20161202.png](http://nononono.net/file/ConoHaAdventCalendar20161202.png)
 ここでぽちぽちとスペックを選びます。スペックを上げ過ぎるとお値段が高くなるので注意してください。  
 私の場合、ブログ投稿直後の10分間に3アクセスぐらいなので(悲しい)次のスペックを選びました。
@@ -53,7 +53,7 @@ SSHKeyは使用しないにしました。あとで設定を変えるという�
 設定を確認したあと、追加をクリックして完成です。
 ![http://nononono.net/file/ConoHaAdventCalendar20161204.png](http://nononono.net/file/ConoHaAdventCalendar20161204.png)
 
-###### サーバに接続
+### サーバに接続
 ネームタグをクリックして、詳細情報を確認すると自分のサーバのIPアドレスが確認出来ます。
 ![http://nononono.net/file/ConoHaAdventCalendar20161205.png](http://nononono.net/file/ConoHaAdventCalendar20161205.png)
 このIPアドレスに、先ほど作成したrootのパスワードで接続します。  
@@ -78,7 +78,7 @@ systemctl restart sshd.service
 pacman -Syu
 ```
 
-##### webサービスを建てる
+### webサービスを建てる
 今回はblog用のサーバなので、webサービスをインストールします。  
 インストールするサービスはnginxです。  
 ```

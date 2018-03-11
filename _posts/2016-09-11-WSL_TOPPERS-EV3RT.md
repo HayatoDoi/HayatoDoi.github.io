@@ -7,20 +7,21 @@ excerpt : TOPPERS/EV3RTとは、LEGO Mindstorms EV3用の開発プラットフ�
 
 ---
 
-##### TOPPERS/EV3RTとは  
+## TOPPERS/EV3RTとは  
 TOPPERS/EV3RTとは、LEGO Mindstorms EV3用の開発プラットフォームです。  
 簡単なC言語でLEGOで作ったものを動かすことが出来てとても楽しいです。  
-##### Windowsで環境構築するために。  
+## Windowsで環境構築するために。  
 [公式サイト](http://dev.toppers.jp/trac_user/ev3pf/wiki/DevEnv)によると、WindowsではCygwinを使ってLinux環境を作っていくようです。
 ですが、今回は最近話題のBash on Ubuntu on Windowsを使って環境を構築してみました。  
-##### インストール方法
-###### Bash on Ubuntu on Windowsをインストールする
+## インストール方法
+### Bash on Ubuntu on Windowsをインストールする
 まず、Bash on Ubuntu on Windowsをインストールします。  
 これは、ネットにたくさん情報が転がっているのでここで紹介する必要はないでしょう。  
 参考URL  
 - [Bash on Ubuntu on Windowsをインストールしてみよう！](http://qiita.com/Aruneko/items/c79810b0b015bebf30bb)  
 - [Bash on Ubuntu on Windowsとは？ そのインストールと使い方](http://www.buildinsider.net/enterprise/bashonwindows/01)  
-###### 必要なパッケージのインストール  
+
+### 必要なパッケージのインストール  
 [公式サイト](http://dev.toppers.jp/trac_user/ev3pf/wiki/DevEnvWin)によると、必要なパッケージは次の通りみたいです。  
 `gcc-core（バージョン4.9.0-1以降 `  
 `make（バージョン（4.0-2）以降)`  
@@ -36,7 +37,8 @@ Bash on Ubuntu on Windowsを起動後、次のコマンドでパッケージを�
 `sudo apt-get install make`  
 `sudo apt-get install diffutils`  
 `sudo apt-get install perl`  
-###### EV3RTパッケージのインストール  
+
+### EV3RTパッケージのインストール  
 公式の[ダウンロードページ](http://dev.toppers.jp/trac_user/ev3pf/wiki/Download)からパッケージをダウンロードしインストールします。(2016年9月11日時点では、β6-2)<Font color="red">※ブラウザでダウンロードしないこと</font>  
 公式サイトから最新版のurlをコピーして、Bash on Ubuntu on Windows で次のコマンドを入力してください。  
 `wget <コピーしたurl>`  
@@ -55,13 +57,13 @@ cfgをビルドします。
 環境変数を変更します。  
 `export LC_ALL=en_US.UTF-8`
   
-##### サンプルをコンパイルしてみよう！
+### サンプルをコンパイルしてみよう！
 <ダウンロードしたファイル名\>/hrp2/sdk/workspaceに移動します。  
 `make app=helloev3`  
 と入力し、次のように出たら成功です。  
 ![成功例](http://nononono.sakura.ne.jp/img/2016-09-11-02.jpg)  
   
-##### エラー  
+## エラー  
 コンパイル時に次のようなエラーが出た。  
 ```
 /root/tmp/ev3rt-beta6-2-release/hrp2/sdk/workspace# make app=helloev3
