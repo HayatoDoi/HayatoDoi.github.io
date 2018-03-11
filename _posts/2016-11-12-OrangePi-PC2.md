@@ -1,4 +1,12 @@
-### OrangePi PC2が届いたのでレビュー的な何かを。
+---
+layout: post
+date: 2016-11-12
+title: OrangePi PC2が届いたのでレビュー的な何かを。
+tags: [OrangePi PC2, OrangePi]
+excerpt: OrangePiとは、手のひらサイズのシングルコンピュータです。OrangePiは有名なRaspberryPiとは違い種類が豊富でSATA2やマイクが載ってるものがあります。値段はRaspberryPiと同じ性能のものが$20ぐらいで安いです(RaspberryPiは$35)。
+
+---
+
 ##### OrangePiとは
 　OrangePiとは、手のひらサイズのシングルコンピュータです。OrangePiは有名なRaspberryPiとは違い種類が豊富でSATA2やマイクが載ってるものがあります。  
 　値段はRaspberryPiと同じ性能のものが$20ぐらいで安いです(RaspberryPiは$35)。  
@@ -81,3 +89,4 @@ Amazonで買った[スペンサー](http://amzn.asia/eErrw49)を付けてみま�
 ##### 感想
 　中国製のボードということで、かなり不安だったのですがちゃんと動いてくれてよかったです。kernelが古かったり、グラフィックドライバがなかったりいろいろ問題が残ってますが満足かなと。  
 　RaspberryPiより速いイーサネットが載ってのでNASにするか…VPNserverにするか…localでDNS建てちゃうか…迷っちゃいますね。
+
