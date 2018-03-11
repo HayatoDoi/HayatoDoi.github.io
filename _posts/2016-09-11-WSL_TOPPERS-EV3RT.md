@@ -1,4 +1,12 @@
-### Bash on Ubuntu on Windowsを使ってTOPPERS/EV3RTの開発環境構築する  
+---
+layout: post
+date: 2016-09-11
+title: Bash on Ubuntu on Windowsを使ってTOPPERS/EV3RTの開発環境構築する
+tags: [Bash on Ubuntu on Windows, TOPPERS/EV3RT]
+excerpt : TOPPERS/EV3RTとは、LEGO Mindstorms EV3用の開発プラットフォームです。簡単なC言語でLEGOで作ったものを動かすことが出来てとても楽しいです。公式サイトによると、WindowsではCygwinを使ってLinux環境を作っていくようです。ですが、今回は最近話題のBash on Ubuntu on Windowsを使って環境を構築してみました。
+
+---
+
 ##### TOPPERS/EV3RTとは  
 TOPPERS/EV3RTとは、LEGO Mindstorms EV3用の開発プラットフォームです。  
 簡単なC言語でLEGOで作ったものを動かすことが出来てとても楽しいです。  
@@ -74,40 +82,3 @@ perl: warning: Please check that your locale settings:
 環境変数がセットされていないみたいだ。  
 `export LC_ALL=en_US.UTF-8`と入力して解決した。  
 
----
-コンパイル時に次のようなエラーが出た。
-```
-/root/tmp/ev3rt-beta6-2-release/hrp2/sdk/workspace# make app=helloev3
-rm -rf /root/tmp/ev3rt-beta6-2-release/hrp2/sdk/workspace/.././OBJ/
-cd /root/tmp/ev3rt-beta6-2-release/hrp2/sdk/workspace/.././OBJ/ && \
-        /root/tmp/ev3rt-beta6-2-release/hrp2/sdk/workspace/../../configure -T ev3_gcc -A app \
-                -a ../workspace/helloev3 \
-                -t ../workspace/helloev3 \
-                -D ../.. \
-                -L ../common/library \
-                -l c \
-                -m .ev3rt_temp_Makefile -o "-DBUILD_MODULE" \
-                -U "" && \
-        rm /root/tmp/ev3rt-beta6-2-release/hrp2/sdk/workspace/helloev3/.ev3rt_temp_Makefile && \
-        mv .ev3rt_temp_Makefile Makefile && \
-        make clean
-configure: Generating .ev3rt_temp_Makefile from ../workspace/helloev3/.ev3rt_temp_Makefile.
-configure: Generating app.c from ../workspace/helloev3/app.c.
-configure: Generating app.h from ../workspace/helloev3/app.h.
-configure: Generating app.cfg from ../workspace/helloev3/app.cfg.
-Executable file of the configurator (cfg) is not found.
-make[1]: Entering directory `/root/tmp/ev3rt-beta6-2-release/hrp2/sdk/OBJ'
-rm -f cfg1_out cfg1_out.o cfg1_out.c cfg1_out.syms cfg1_out.srec module_cfg.h module_cfg.c \#* *~ *.o
-make[1]: Leaving directory `/root/tmp/ev3rt-beta6-2-release/hrp2/sdk/OBJ'
-make[1]: Entering directory `/root/tmp/ev3rt-beta6-2-release/hrp2/sdk/OBJ'
-  CFG[1]  module_cfg.h
-make[1]: ../../cfg/cfg/cfg: Command not found
-make[1]: *** [module_cfg.h] Error 127
-make[1]: Leaving directory `/root/tmp/ev3rt-beta6-2-release/hrp2/sdk/OBJ'
-make: *** [app] Error 2
-```  
-
-cfgをビルドしていなかった。  
-`cd hrp2/cfg`  
-`make`  
-で解決!!  

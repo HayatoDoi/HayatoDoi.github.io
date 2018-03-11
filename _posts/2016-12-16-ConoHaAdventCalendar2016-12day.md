@@ -1,4 +1,11 @@
-### ConoHa Advent Calendar 2016 12日目
+---
+layout: post
+date: 2016-12-16
+title: ConoHa Advent Calendar 2016 12日目
+tags: [Conoha, Advent Calendar 2016, Advent Calendar]
+excerpt: ConohaでVPNを借りてみたという記事です。
+
+---
 
 ##### 初めてのこのは♪
 　ConohaでVPNを借りてみたという記事です。
@@ -87,3 +94,5 @@ systemctl enable nginx
 
 あとは、ブログを動かすだけなんですが…まだ完成してなくて…。  
 どの言語で実装するかも決まってないので早く決めないとなぁ…
+
+

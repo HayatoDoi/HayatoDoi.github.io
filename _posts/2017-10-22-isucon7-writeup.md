@@ -1,4 +1,12 @@
-## ISUCON7 write up
+---
+layout: post
+date: 2017-10-22
+title: ISUCON7 write up
+tags: [ISUCON, ISUCON7, write up]
+excerpt: 2017年10月22日に開催されたISUCON7にらぃとくんとたわしくんとわたしで参加しました。チーム名は「5000兆円欲しい！」です。
+
+---
+
 10月22日に開催されたISUCON7に [らぃとくん](https://twitter.com/lightnet328)と[たわしくん](https://twitter.com/nCk_cv)とわたしで参加しました。  
 チーム名は「5000兆円欲しい！」です。
 
@@ -120,3 +128,4 @@ Server03にApp機能をもたせることによって負荷が大きくなるた
 今回はチームメンバー二人のエンジニアリング力が高くてとても助けられました。  
 わたしがいっぱい足を引っ張っていなければ決勝に…。  
 来年こそは決勝進出したいです。  
+

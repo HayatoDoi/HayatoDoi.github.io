@@ -1,0 +1,6 @@
+permalink: /:categories/:year-:month-:day/:title
+author :
+  name : Hayato Doi
+domain :
+  upper : EXPLOIT.MOE
+  lower : exploit.moe

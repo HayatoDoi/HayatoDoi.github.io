@@ -1,0 +1,19 @@
+/**
+ * File Name : footer.css
+ * Outline   : footer design
+ * -------------------------------------------------
+ * (c) 2018 Hayato Doi. (CC0 Licensed)
+ * https://github.com/HayatoDoi/HayatoDoi.github.io
+ *
+ * This program was modified by Hayato Doi.
+ * pure css framework v1.0.0
+ * Copyright 2013 Yahoo! Inc.
+ * https://github.com/pure-css/pure/blob/master/LICENSE.md
+ */
+.footer {
+    border-top: 1px solid #eee;
+    margin: 0;
+    color: #333;
+    text-align: center;
+    padding:20px;
+}
