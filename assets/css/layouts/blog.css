@@ -44,6 +44,8 @@ h3 {
         color: #222;
     }
 .post-avatar {
+    width: 48px;
+    height: 48px;
     border: 1px solid ;
     border-radius: 50px;
     float: right;
