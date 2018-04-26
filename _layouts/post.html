@@ -1,62 +1,71 @@
 ---
 layout: default
 ---
-<!-- <link rel="stylesheet" href="/assets/css/grids&#45;responsive&#45;min.css"> -->
-<link rel="stylesheet" href="/assets/css/layouts/blog.css">
-<link rel="stylesheet" href="/assets/css/layouts/post.css">
-<div class="posts">
-<section class="post">
-<header class="post-header">
-<div class="post-author">
-  <img class="post-avatar" src="/assets/favicon.jpg">
-  <a href="/about.html">{{site.author.name}}</a>
+<div class="header">
+  {% if page.private == true %}
+    <i class="fas fa-key fa-5x" style="color: #fecb81"></i>
+  {% endif %}
+  <h1>{{ page.title }}</h1>
 </div>
-<!-- <p class="post&#45;meta"> -->
-<div class="post-tag">
-  {% for tag in page.tags %}
-  <a class="post-category post-category-pure" href="/?tag={{tag}}">{{tag}}</a>
-{% endfor %}
-</div>
-<!-- </p> -->
-<p class="post-meta-right">{{page.date|date_to_long_string}}</p>
-</header>
-<div class="post-agenda">
-    <hr>
-    <ul id="agenda-body">
-        <!-- <li><a>応募用紙</a></li> -->
-        <!-- <li>1日目</li> -->
-        <!-- <ul> -->
-        <!--   <li>オープニング</li> -->
-        <!--   <li>昼食休憩</li> -->
-        <!--   <li>機械学習とセキュリティ</li> -->
-        <!--   <li>情報セキュリティ技術者のための法律講座</li> -->
-        <!--   <li>static🍣</li> -->
-        <!--   <li>ホテル</li> -->
-        <!-- </ul> -->
-        <!-- <li>2日目</li> -->
-        <!-- <ul> -->
-        <!-- <li>Webプログラミング基礎講座(前篇)</li> -->
-        <!-- <li>Webプログラミング基礎講座(後篇)</li> -->
-        <!-- <li>いじって壊して遊んでハッカーになろう</li> -->
-        <!-- </i>ホテル</li> -->
-        <!-- </ul> -->
-        <!-- <li>3日目</li> -->
-        <!-- <ul> -->
-        <!-- <li>ハニーポットの講義</li> -->
-        <!-- <li>マルウェア解析講座</li> -->
-        <!-- <li>クロージング</li> -->
-        <!-- </ul> -->
-        <!-- <li>感想</li> -->
-    </ul>
-    <hr>
-</div>
-<!-- <img alt="Photo of someone working poolside at a resort" class="pure&#45;img&#45;responsive" src="http://nononono.net/file/seccamp2016kyusyuopening.jpg"> -->
-
-<div class="post-description" id="content">
-{{ content }}
-</div>
-<script src="/assets/js/content-add-css-class.js"></script>
-<script src="/assets/js/create-agenda.js"></script>
-<script src="/assets/js/ui.js"></script>
-</section>
+<div class="content">
+  <!-- <link rel="stylesheet" href="/assets/css/grids&#45;responsive&#45;min.css"> -->
+  <link rel="stylesheet" href="/assets/css/layouts/blog.css">
+  <link rel="stylesheet" href="/assets/css/layouts/post.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+  <div class="posts">
+  <section class="post">
+  <header class="post-header">
+  <div class="post-author">
+    <img class="post-avatar" src="/assets/favicon.jpg">
+    <a href="/about.html">{{site.author.name}}</a>
+  </div>
+  <!-- <p class="post&#45;meta"> -->
+  <div class="post-tag">
+    {% for tag in page.tags %}
+    <a class="post-category post-category-pure" href="/?tag={{tag}}">{{tag}}</a>
+  {% endfor %}
+  </div>
+  <!-- </p> -->
+  <p class="post-meta-right">{{page.date|date_to_long_string}}</p>
+  </header>
+  <div class="post-agenda">
+      <hr>
+      <ul id="agenda-body">
+          <!-- <li><a>応募用紙</a></li> -->
+          <!-- <li>1日目</li> -->
+          <!-- <ul> -->
+          <!--   <li>オープニング</li> -->
+          <!--   <li>昼食休憩</li> -->
+          <!--   <li>機械学習とセキュリティ</li> -->
+          <!--   <li>情報セキュリティ技術者のための法律講座</li> -->
+          <!--   <li>static🍣</li> -->
+          <!--   <li>ホテル</li> -->
+          <!-- </ul> -->
+          <!-- <li>2日目</li> -->
+          <!-- <ul> -->
+          <!-- <li>Webプログラミング基礎講座(前篇)</li> -->
+          <!-- <li>Webプログラミング基礎講座(後篇)</li> -->
+          <!-- <li>いじって壊して遊んでハッカーになろう</li> -->
+          <!-- </i>ホテル</li> -->
+          <!-- </ul> -->
+          <!-- <li>3日目</li> -->
+          <!-- <ul> -->
+          <!-- <li>ハニーポットの講義</li> -->
+          <!-- <li>マルウェア解析講座</li> -->
+          <!-- <li>クロージング</li> -->
+          <!-- </ul> -->
+          <!-- <li>感想</li> -->
+      </ul>
+      <hr>
+  </div>
+  <!-- <img alt="Photo of someone working poolside at a resort" class="pure&#45;img&#45;responsive" src="http://nononono.net/file/seccamp2016kyusyuopening.jpg"> -->
+  
+  <div class="post-description" id="content">
+  {{ content }}
+  </div>
+  <script src="/assets/js/content-add-css-class.js"></script>
+  <script src="/assets/js/create-agenda.js"></script>
+  <script src="/assets/js/ui.js"></script>
+  </section>
+  </div>
 </div>
