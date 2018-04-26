@@ -38,9 +38,15 @@
             <a class="pure-menu-heading" href="http://{{site.domain.lower}}">{{site.domain.lower}}</a>
 
             <ul class="pure-menu-list">
-                <li class="pure-menu-item"><a href="/" class="pure-menu-link">Home</a></li>
-                <li class="pure-menu-item"><a href="/about.html" class="pure-menu-link">About</a></li>
-                <li class="pure-menu-item"><a href="/contact.html" class="pure-menu-link">Contact</a></li>
+                <li class="pure-menu-item
+			{% if page.layout == 'top' %} pure-menu-selected{% endif %}
+			"><a href="/" class="pure-menu-link">Home</a></li>
+                <li class="pure-menu-item
+			{% if page.layout == 'about' %} pure-menu-selected{% endif %}
+			"><a href="/about.html" class="pure-menu-link">About</a></li>
+                <li class="pure-menu-item
+			{% if page.layout == 'contact' %} pure-menu-selected{% endif %}
+			"><a href="/contact.html" class="pure-menu-link">Contact</a></li>
             </ul>
         </div>
     </div>
@@ -56,7 +62,6 @@
         <div class="footer">&copy; 2015-<script>document.write((new Date()).getFullYear());</script> Hayato Doi. Powerd by <a href="https://jekyllrb.com">Jekyll</a> &amp; <a href="https://purecss.io">Pure</a>.</div>
     </div>
 </div>
-<script src="/assets/js/select-pure-menu-item.js"></script>
 <script src="/assets/js/ui.js"></script>
 <script>twemoji.parse(document.body);</script>
 </body>
