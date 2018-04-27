@@ -31,7 +31,7 @@
     const pair=location.search.substring(1).split('&');
     for(let i = 0; pair[i]; i++){
       let kv = pair[i].split('=');
-      arg[kv[0]]=decodeURI(kv[1]);
+      arg[kv[0]]=decodeURI(kv[1]).replace(/\+/g,' ');
     }
     return arg;
   }

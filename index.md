@@ -10,7 +10,7 @@ title: Home
   {% endif %}
   <section class="post">
   <header class="post-header">
-  <img class="post-avatar" src="/assets/favicon.jpg">
+  <img class="post-avatar" src="/assets/favicon.jpg" alt="/assets/favicon.jpg">
   <h2 class="post-title">
     <!-- <a href="{{post.url}}">{{post.title}}</a> -->
     <a href="{{post.url}}">{{post.title}}</a>
@@ -20,7 +20,7 @@ title: Home
   By <a class="post-author" href="/about.html">{{site.author.name}}</a>
    under 
   {% for tag in post.tags %}
-    <a class="post-category post-category-pure" href="/?tag={{tag}}">{{tag}}</a>
+    <a class="post-category post-category-pure" href="/?tag={{tag | url_encode}}">{{tag}}</a>
   {% endfor %}
   </p>
   <p class="post-meta-right">{{post.date|date_to_long_string}}</p>

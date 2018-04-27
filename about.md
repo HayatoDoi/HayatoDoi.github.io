@@ -3,17 +3,6 @@ layout: about
 title: About
 
 ---
-<!-- <div id="about-icon"> -->
-<!--   <img src="/assets/favicon.jpg" alt="/assets/favicon.jpg"> -->
-<!-- </div> -->
-<!-- <style> -->
-<!-- .about-icon { -->
-<!--   text-align:center; -->
-<!-- } -->
-<!-- .about-icon img { -->
-<!--   border-radius: 50%; -->
-<!-- } -->
-<!-- <style> -->
 
 ### Name
   - Hayato Doi

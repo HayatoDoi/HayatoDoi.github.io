@@ -11,7 +11,7 @@
     - https://github.com/twitter/twemoji/blob/gh-pages/LICENSE
 -->
 <!doctype html>
-<html lang="jp">
+<html lang="ja">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="/assets/css/layouts/side-menu.css">
     <link rel="stylesheet" href="/assets/css/layouts/footer.css">
     <link rel="stylesheet" href="/assets/css/layouts/twemoji.css">
+    <link rel="stylesheet" href="/assets/css/syntax.css">
     <link rel="shortcut icon" href="/assets/favicon.jpg">
     <script src="//twemoji.maxcdn.com/2/twemoji.min.js?2.5"></script>
 </head>
@@ -41,15 +42,15 @@
             <a class="pure-menu-heading" href="http://{{site.domain.lower}}">{{site.domain.lower}}</a>
 
             <ul class="pure-menu-list">
-                <li class="pure-menu-item
-			{% if page.layout == 'top' %} pure-menu-selected{% endif %}
-			"><a href="/" class="pure-menu-link">Home</a></li>
-                <li class="pure-menu-item
-			{% if page.layout == 'about' %} pure-menu-selected{% endif %}
-			"><a href="/about.html" class="pure-menu-link">About</a></li>
-                <li class="pure-menu-item
-			{% if page.layout == 'contact' %} pure-menu-selected{% endif %}
-			"><a href="/contact.html" class="pure-menu-link">Contact</a></li>
+                <li class="pure-menu-item {% if page.layout == 'top' %}pure-menu-selected{% endif %}">
+		  <a href="/" class="pure-menu-link">Home</a>
+		</li>
+                <li class="pure-menu-item {% if page.layout == 'about' %}pure-menu-selected{% endif %}">
+		  <a href="/about.html" class="pure-menu-link">About</a>
+		</li>
+                <li class="pure-menu-item {% if page.layout == 'contact' %}pure-menu-selected{% endif %}">
+		  <a href="/contact.html" class="pure-menu-link">Contact</a>
+		</li>
             </ul>
         </div>
     </div>
@@ -63,5 +64,3 @@
 <script>twemoji.parse(document.body);</script>
 </body>
 </html>
-<style>
-</style>

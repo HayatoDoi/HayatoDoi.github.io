@@ -44,7 +44,8 @@ excerpt: 2017年10月22日に開催されたISUCON7にらぃとくんとたわ�
 変更箇所は以下3つです。  
 1. 初期データを静的なファイルに書き出し  
 適当にスクリプトを組んで保存しました。  
-  ```python
+
+```python
   import MySQLdb.cursors
 
   conn = MySQLdb.connect(

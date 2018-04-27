@@ -4,3 +4,5 @@ author :
 domain :
   upper : EXPLOIT.MOE
   lower : exploit.moe
+markdown: kramdown
+highlighter: rouge
