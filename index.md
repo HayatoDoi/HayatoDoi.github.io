@@ -1,7 +1,6 @@
 ---
 layout: top
-title: Home
-excerpt: This is HayatoDoi's web site.
+title: Blog
 
 ---
 <div class="posts">
@@ -17,7 +16,7 @@ excerpt: This is HayatoDoi's web site.
   </h2>
   
   <p class="post-meta">
-  By <a class="post-author" href="/about.html">{{site.author.name}}</a>
+  By <a class="post-author" href="/about.html">{{site.author.screen_name}}</a>
    under 
   {% for tag in post.tags %}
     <a class="post-category post-category-pure" href="/?tag={{tag | url_encode}}">{{tag}}</a>

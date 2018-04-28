@@ -1,8 +1,9 @@
 permalink: /:categories/:year-:month-:day/:title
 author :
   name : Hayato Doi
+  screen_name : ノノノノ
   twitter : no_______nonono
-excerpt : This is HayatoDoi's web site.
+excerpt : This is ノノノノ's web site.
 title : EXPLOIT.MOE
 domain :
   upper : EXPLOIT.MOE
