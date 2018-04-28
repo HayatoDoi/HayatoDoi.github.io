@@ -1,0 +1,8 @@
+#about-icon {
+  text-align:center;
+  padding: 40px;
+}
+#about-icon img {
+  border-radius: 50%;
+  border: 3px solid ;
+}
