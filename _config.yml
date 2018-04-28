@@ -1,6 +1,9 @@
 permalink: /:categories/:year-:month-:day/:title
 author :
   name : Hayato Doi
+  twitter : no_______nonono
+excerpt : This is HayatoDoi's web site.
+title : EXPLOIT.MOE
 domain :
   upper : EXPLOIT.MOE
   lower : exploit.moe

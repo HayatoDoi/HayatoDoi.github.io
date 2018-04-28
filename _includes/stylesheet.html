@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+<link rel="stylesheet" href="/assets/css/layouts/side-menu.css">
+<link rel="stylesheet" href="/assets/css/layouts/footer.css">
+<link rel="stylesheet" href="/assets/css/layouts/twemoji.css">
+<link rel="stylesheet" href="/assets/css/syntax.css">
+{% if page.layout == "top" %}
+  <link rel="stylesheet" href="/assets/css/layouts/blog.css">
+{% endif %}
+
+{% if page.layout == "post" %}
+  <link rel="stylesheet" href="/assets/css/layouts/blog.css">
+  <link rel="stylesheet" href="/assets/css/layouts/post.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+{% endif %}
+
+{% if page.layout == "about" %}
+  <style>
+  #about-icon {
+    text-align:center;
+    padding: 40px;
+  }
+  #about-icon img {
+    border-radius: 50%;
+    border: 3px solid ;
+  
+  }
+  </style>
+{% endif %}
+

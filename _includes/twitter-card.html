@@ -1,0 +1,26 @@
+{% if page.image %}
+<meta name="twitter:card" content="summary_large_image" />
+{% else %}
+<meta name="twitter:card" content="summary" />
+{% endif %}
+
+<meta name="twitter:site" content="@{{ site.author.twitter }}" />
+
+{% if page.title %}
+  <meta name="twitter:title" content="{{ page.title }}" />
+{% else %}
+  <meta name="twitter:title" content="{{ site.title }}" />
+{% endif %}
+
+{% if page.excerpt %}
+  <meta name="twitter:description" content="{{ page.excerpt }}" />
+{% else %}
+  <meta name="twitter:description" content="{{ site.excerpt }}" />
+{% endif %}
+
+{% if page.image %}
+  <meta name="twitter:image" content="{{ page.image }}" />
+{% else %}
+  <meta name="twitter:image" content="/assets/favicon.jpg" />
+{% endif %}
+

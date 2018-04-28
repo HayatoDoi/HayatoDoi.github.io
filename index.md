@@ -1,6 +1,7 @@
 ---
 layout: top
 title: Home
+excerpt: This is HayatoDoi's web site.
 
 ---
 <div class="posts">
@@ -12,7 +13,6 @@ title: Home
   <header class="post-header">
   <img class="post-avatar" src="/assets/favicon.jpg" alt="/assets/favicon.jpg">
   <h2 class="post-title">
-    <!-- <a href="{{post.url}}">{{post.title}}</a> -->
     <a href="{{post.url}}">{{post.title}}</a>
   </h2>
   
