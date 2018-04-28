@@ -3,12 +3,12 @@ layout: post
 date: 2016-12-16
 title: ConoHa Advent Calendar 2016 12日目
 tags: [Conoha, Advent Calendar 2016, Advent Calendar]
-excerpt: ConohaでVPNを借りてみたという記事です。
+excerpt: ConohaでVPSを借りてみたという記事です。
 
 ---
 
 ## 初めてのこのは♪
-　ConohaでVPNを借りてみたという記事です。
+　ConohaでVPSを借りてみたという記事です。
 
 ### なんでConohaなのか。
  VPSを借りようとしてる人は、どこのVPSを借りようか迷うと思います。私がConohaを選んだ理由をまとめて見ました。
