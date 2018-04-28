@@ -29,7 +29,7 @@ TOPPERS/EV3RTとは、LEGO Mindstorms EV3用の開発プラットフォームで
 `perl（バージョン（5.22.1）以降）`  
 gcc-coreとは、Cygwin用のgccですので、今回は普通のgccで問題ありません。  
 Windowsキーを押して検索画面を出した後、「Bash on Ubuntu on Windows」と入力してBash on Ubuntu on Windowsを起動します。  
-![Bash on Ubuntu on Windowsの起動](http://nononono.sakura.ne.jp/img/2016-09-11-01.jpg)
+![Bash on Ubuntu on Windowsの起動](/img/WSL_TOPPERS-EV3RT/01.jpg)
 Bash on Ubuntu on Windowsを起動後、次のコマンドでパッケージをインストールしてください。  
 `sudo add-apt-repository ppa:terry.guo/gcc-arm-embedded`  
 `sudo apt-get update`  
@@ -61,7 +61,7 @@ cfgをビルドします。
 <ダウンロードしたファイル名\>/hrp2/sdk/workspaceに移動します。  
 `make app=helloev3`  
 と入力し、次のように出たら成功です。  
-![成功例](http://nononono.sakura.ne.jp/img/2016-09-11-02.jpg)  
+![成功例](/img/WSL_TOPPERS-EV3RT/02.jpg)  
   
 ## エラー  
 コンパイル時に次のようなエラーが出た。  

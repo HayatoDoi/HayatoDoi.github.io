@@ -25,12 +25,12 @@ excerpt: ConohaでVPSを借りてみたという記事です。
 
 ### 選べるOSがたくさんある。
 Cent Ubuntu Debian FreeBSD Fedora OpenSUSE Arch NetBSD OpenBSDとたくさんあって良いのですよ。
-![http://nononono.net/file/ConoHaAdventCalendar20161201.png](http://nononono.net/file/ConoHaAdventCalendar20161201.png)
+![/img/ConoHaAdventCalendar2016-12day/ConoHaAdventCalendar20161201.png](/img/ConoHaAdventCalendar2016-12day/ConoHaAdventCalendar20161201.png)
 
 ## 借りてみる。
 今回は、自宅においてあるこのブログをConohaに移行してみようと思います。  
 ### サーバの作成
-アカウント作成後初めてログインすると、このようなページが出てきます。![http://nononono.net/file/ConoHaAdventCalendar20161202.png](http://nononono.net/file/ConoHaAdventCalendar20161202.png)
+アカウント作成後初めてログインすると、このようなページが出てきます。![/img/ConoHaAdventCalendar2016-12day/ConoHaAdventCalendar20161202.png](/img/ConoHaAdventCalendar2016-12day/ConoHaAdventCalendar20161202.png)
 ここでぽちぽちとスペックを選びます。スペックを上げ過ぎるとお値段が高くなるので注意してください。  
 私の場合、ブログ投稿直後の10分間に3アクセスぐらいなので(悲しい)次のスペックを選びました。
 
@@ -51,13 +51,13 @@ rootパスワードを設定して。
 SSHKeyは使用しないにしました。あとで設定を変えるということで…。  
 ネームタグは好きな名前で。  
 設定を確認したあと、追加をクリックして完成です。
-![http://nononono.net/file/ConoHaAdventCalendar20161204.png](http://nononono.net/file/ConoHaAdventCalendar20161204.png)
+![/img/ConoHaAdventCalendar2016-12day/ConoHaAdventCalendar20161204.png](/img/ConoHaAdventCalendar2016-12day/ConoHaAdventCalendar20161204.png)
 
 ### サーバに接続
 ネームタグをクリックして、詳細情報を確認すると自分のサーバのIPアドレスが確認出来ます。
-![http://nononono.net/file/ConoHaAdventCalendar20161205.png](http://nononono.net/file/ConoHaAdventCalendar20161205.png)
+![/img/ConoHaAdventCalendar2016-12day/ConoHaAdventCalendar20161205.png](/img/ConoHaAdventCalendar2016-12day/ConoHaAdventCalendar20161205.png)
 このIPアドレスに、先ほど作成したrootのパスワードで接続します。  
-![http://nononono.net/file/ConoHaAdventCalendar20161206.png](http://nononono.net/file/ConoHaAdventCalendar20161206.png)
+![/img/ConoHaAdventCalendar2016-12day/ConoHaAdventCalendar20161206.png](/img/ConoHaAdventCalendar2016-12day/ConoHaAdventCalendar20161206.png)
 
 セキュリティ上rootでログインできるのは危ないため、アカウントを作成し、rootログインを禁止します。(#は1行コメント)
 ```
@@ -90,7 +90,7 @@ systemctl start nginx
 systemctl enable nginx
 ```
 これで、ブラウザで自分のIPアドレスを叩いてWellcome to nginx!と表示されたら、成功です。
-![http://nononono.net/file/ConoHaAdventCalendar20161207.png](http://nononono.net/file/ConoHaAdventCalendar20161207.png)
+![/img/ConoHaAdventCalendar2016-12day/ConoHaAdventCalendar20161207.png](/img/ConoHaAdventCalendar2016-12day/ConoHaAdventCalendar20161207.png)
 
 あとは、ブログを動かすだけなんですが…まだ完成してなくて…。  
 どの言語で実装するかも決まってないので早く決めないとなぁ…

@@ -11,7 +11,7 @@ excerpt: OrangePiとは、手のひらサイズのシングルコンピュータ
 　OrangePiとは、手のひらサイズのシングルコンピュータです。OrangePiは有名なRaspberryPiとは違い種類が豊富でSATA2やマイクが載ってるものがあります。  
 　値段はRaspberryPiと同じ性能のものが$20ぐらいで安いです(RaspberryPiは$35)。  
 　サイズはこんな感じです。
-![boughtOPIimg06.png](http://nononono.net/file/boughtOPIimg06.png)
+![boughtOPIimg06.png](/img/OrangePi-PC2/boughtOPIimg06.png)
 ## OrangePi PC2
 　今回買ったのはOrangePi PC2というもので、性能は次の通りです。[参考](http://www.orangepi.org/orangepipc2/)
 <table border="1" rules="all">
@@ -58,11 +58,11 @@ DCケーブルはなかったため、友人からPSPの充電器を借りてテ
 　まぁ、なんというか…成功しなかったんですけどね。
 
 　電源のLEDが赤く光っていたため、bootは成功してるかなと思ってとりあえずARPスキャンかけてみたら…なんかおるやんけ！！  
-![boughtOPIimg02.png](http://nononono.net/file/boughtOPIimg02.png)
+![boughtOPIimg02.png](/img/OrangePi-PC2/boughtOPIimg02.png)
 
 
 　もしかして…と思い、Nmapかけてみました。これ勝ったなwガハハww
-![boughtOPIimg03.png](http://nononono.net/file/boughtOPIimg03.png)
+![boughtOPIimg03.png](/img/OrangePi-PC2/boughtOPIimg03.png)
 
 　あとは、sshで繋いであげたらいいのですが…公式サイトの書いてあるのはrootのパスワードだけなのでこれは困ったな…と。(sshdのデフォルトの設定でrootのログインは禁止されているため繋ぐことが出来ず、もしかしてconfig書き換えてあるかなと思って試したけどダメでした。)
 
@@ -73,18 +73,18 @@ DCケーブルはなかったため、友人からPSPの充電器を借りてテ
 　ユーザー名orangepi パスワードorangepiでログイン出来ました。
 
 　やったね♪
-![boughtOPIimg04.png](http://nononono.net/file/boughtOPIimg04.png)
+![boughtOPIimg04.png](/img/OrangePi-PC2/boughtOPIimg04.png)
 
 ## 1000Mイーサネットを体感しちゃう♪
 　RaspberryPiと違って1000Mイーサネットが搭載されているならどんだけ速いんだい？？ってことで計測してみた。
-![boughtOPIimg05.png](http://nononono.net/file/boughtOPIimg05.png)
+![boughtOPIimg05.png](/img/OrangePi-PC2/boughtOPIimg05.png)
 
 　RaspberryPiが8ミリ秒の対してOrangePiは2ミリ秒!!  
 　4倍ですよ!!いいですね～♪
 
 ## 見た目
 Amazonで買った[スペンサー](http://amzn.asia/eErrw49)を付けてみました。タワーにしようか？？
-![boughtOPIimg07.png](http://nononono.net/file/boughtOPIimg07.png)
+![boughtOPIimg07.png](/img/OrangePi-PC2/boughtOPIimg07.png)
 
 ## 感想
 　中国製のボードということで、かなり不安だったのですがちゃんと動いてくれてよかったです。kernelが古かったり、グラフィックドライバがなかったりいろいろ問題が残ってますが満足かなと。  
