@@ -1,3 +1,5 @@
+---
+---
 /**
  * File Name : post.scss
  * Outline   : post design
@@ -12,8 +14,11 @@
  */
 
 /*
- * Overwrite blog.css
+ * Overwrite pure-min.css & blog.css
  * */
+
+@import "_pure-min-scss.scss";
+@import "layouts/_blog-scss.scss";
 
 .post-author {
     display: flex;
@@ -64,10 +69,18 @@
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
     .content-link {
-        background-image: url('/img/link-icon@2x.png');
+        background-image: url('https://purecss.io/img/link-icon@2x.png');
     }
 }
 
-#content table {
-    @extend pure-table;
+#content {
+    h2 {
+        @extend .content-subhead;
+    }
+    img {
+        @extend .pure-img-responsive;
+    }
+    table {
+        @extend .pure-table;
+    }
 }

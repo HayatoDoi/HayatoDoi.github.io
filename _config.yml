@@ -11,3 +11,5 @@ domain :
   lower : exploit.moe
 markdown: kramdown
 highlighter: rouge
+sass:
+  sass_dir: ./assets/css
