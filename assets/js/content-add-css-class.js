@@ -14,7 +14,11 @@
     img: {
       exclusion: ['emoji'],
       addc: ['pure-img-responsive'],
-    }
+    },
+    table: {
+      exclusion: [],
+      addc: ['pure-table'],
+    },
   }
   // ---
   let content = document.getElementById('content');

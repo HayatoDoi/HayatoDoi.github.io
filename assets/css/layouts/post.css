@@ -67,7 +67,3 @@
         background-image: url('/img/link-icon@2x.png');
     }
 }
-
-#content table {
-    @extend .pure-table;
-}
