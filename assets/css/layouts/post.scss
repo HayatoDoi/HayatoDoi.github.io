@@ -1,5 +1,5 @@
 /**
- * File Name : post.css
+ * File Name : post.scss
  * Outline   : post design
  * -------------------------------------------------
  * (c) 2018 Hayato Doi. (CC0 Licensed)
@@ -66,4 +66,8 @@
     .content-link {
         background-image: url('/img/link-icon@2x.png');
     }
+}
+
+#content table {
+    @extend pure-table;
 }
