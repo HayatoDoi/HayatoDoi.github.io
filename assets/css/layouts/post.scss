@@ -101,4 +101,13 @@
     blockquote p {
         display: inline;
     }
+    code.highlighter-rouge {
+        font-family: Georgia, "Cambria", serif;
+        color: #F00;
+        background-color: rgba(190, 190, 190, 0.253);
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        padding: 0px 3px 0px 3px;
+    }
 }
