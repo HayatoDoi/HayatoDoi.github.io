@@ -90,7 +90,7 @@ ioctl() を呼び出してパーティション情報を再読み込みします
 
 #### USBメモリをフォーマット
 ```
-$ sudo mkfs -t vfat /dev/sdc1
+$ sudo mkfs.ntfs /dev/sdc1
 ```
 
 ### ISOの中身をコピー
@@ -107,7 +107,7 @@ $ sudo mkfs -t vfat /dev/sdc1
 
 - USBをマウント
   ```
-  $ sudo mount -t vfat /dev/sdc1 mnt/usbs
+  $ sudo mount -t ntfs /dev/sdc1 mnt/usbs
   ```
 
 #### コピーを実行
@@ -117,7 +117,8 @@ sudo cp -r mnt/iso/* mnt/usb
 
 ### マウントを解除 & 不要なディレクトリの削除
 ```
-$ sudo umount -R mnt
+$ sudo umount mnt/iso
+$ sudo umount mnt/usb
 $ rm -rf mnt
 ```
 
